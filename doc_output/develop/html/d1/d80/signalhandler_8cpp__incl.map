@@ -1,0 +1,15 @@
+<map id="src/tools/signalhandler.cpp" name="src/tools/signalhandler.cpp">
+<area shape="rect" id="node2" href="$d8/d11/signalhandler_8hpp.html" title="signal handler to provide a C++ interface for UNIX sigaction() " alt="" coords="506,80,629,107"/>
+<area shape="rect" id="node6" href="$dc/dce/signalexception_8hpp.html" title="Exception class for Signal related errors. " alt="" coords="746,80,943,107"/>
+<area shape="rect" id="node20" href="$d8/d8e/unixsyscall_8hpp.html" title="unix syscall helper functions " alt="" coords="1471,304,1615,331"/>
+<area shape="rect" id="node8" href="$d1/ddd/leosacexception_8hpp.html" title="Exception class for LEOSAC Project related errors. " alt="" coords="738,155,879,181"/>
+<area shape="rect" id="node10" href="$d7/d7a/configexception_8hpp.html" title="configexception.hpp" alt="" coords="109,229,247,256"/>
+<area shape="rect" id="node13" href="$d8/db0/coreexception_8hpp.html" title="Exception class for Core related errors. " alt="" coords="271,229,399,256"/>
+<area shape="rect" id="node14" href="$d8/d77/deviceexception_8hpp.html" title="Exception class for Device related errors. " alt="" coords="423,229,565,256"/>
+<area shape="rect" id="node15" href="$db/d35/dynlibexception_8hpp.html" title="Exception class for DynLib related errors. " alt="" coords="589,229,727,256"/>
+<area shape="rect" id="node16" href="$d0/d4e/fsexception_8hpp.html" title="Exception class for filesystem related errors. " alt="" coords="751,229,866,256"/>
+<area shape="rect" id="node17" href="$d1/d8e/gpioexception_8hpp.html" title="Exception class for Gpio related errors. " alt="" coords="891,229,1017,256"/>
+<area shape="rect" id="node18" href="$d7/d8c/moduleexception_8hpp.html" title="Exception class for modules. " alt="" coords="1041,229,1187,256"/>
+<area shape="rect" id="node19" href="$df/d8d/scriptexception_8hpp.html" title="Exception class for Script related errors. " alt="" coords="1211,229,1345,256"/>
+<area shape="rect" id="node11" href="$dd/d35/Colorize_8hpp.html" title="tools/Colorize.hpp" alt="" coords="137,304,264,331"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="src/core/module_manager.hpp" name="src/core/module_manager.hpp">
+<area shape="rect" id="node8" href="$d7/dbe/dynamiclibrary_8hpp.html" title="DynamicLibrary class. " alt="" coords="68,80,237,107"/>
+<area shape="rect" id="node11" href="$db/d79/ConfigManager_8hpp.html" title="core/config/ConfigManager.hpp" alt="" coords="1139,80,1342,107"/>
+<area shape="rect" id="node32" href="$dc/d49/LeosacFwd_8hpp.html" title="LeosacFwd.hpp" alt="" coords="1366,80,1481,107"/>
+<area shape="rect" id="node14" href="$d1/ddd/leosacexception_8hpp.html" title="Exception class for LEOSAC Project related errors. " alt="" coords="939,162,1164,189"/>
+<area shape="rect" id="node27" href="$d4/d3d/log_8hpp.html" title="../../tools/log.hpp" alt="" coords="1879,319,1999,345"/>
+<area shape="rect" id="node16" href="$d7/d7a/configexception_8hpp.html" title="configexception.hpp" alt="" coords="1777,244,1915,271"/>
+<area shape="rect" id="node19" href="$d8/db0/coreexception_8hpp.html" title="Exception class for Core related errors. " alt="" coords="1459,244,1587,271"/>
+<area shape="rect" id="node20" href="$d8/d77/deviceexception_8hpp.html" title="Exception class for Device related errors. " alt="" coords="1611,244,1753,271"/>
+<area shape="rect" id="node21" href="$db/d35/dynlibexception_8hpp.html" title="Exception class for DynLib related errors. " alt="" coords="363,244,500,271"/>
+<area shape="rect" id="node22" href="$d0/d4e/fsexception_8hpp.html" title="Exception class for filesystem related errors. " alt="" coords="525,244,639,271"/>
+<area shape="rect" id="node23" href="$d1/d8e/gpioexception_8hpp.html" title="Exception class for Gpio related errors. " alt="" coords="664,244,791,271"/>
+<area shape="rect" id="node24" href="$d7/d8c/moduleexception_8hpp.html" title="Exception class for modules. " alt="" coords="815,244,960,271"/>
+<area shape="rect" id="node25" href="$df/d8d/scriptexception_8hpp.html" title="Exception class for Script related errors. " alt="" coords="984,244,1119,271"/>
+<area shape="rect" id="node26" href="$dc/dce/signalexception_8hpp.html" title="Exception class for Signal related errors. " alt="" coords="1143,244,1280,271"/>
+<area shape="rect" id="node17" href="$dd/d35/Colorize_8hpp.html" title="tools/Colorize.hpp" alt="" coords="1673,319,1800,345"/>
+</map>

@@ -1,0 +1,26 @@
+<map id="src/core/tasks/GetRemoteConfigVersion.cpp" name="src/core/tasks/GetRemoteConfigVersion.cpp">
+<area shape="rect" id="node2" href="$d4/d3d/log_8hpp.html" title="tools/log.hpp" alt="" coords="1059,341,1155,367"/>
+<area shape="rect" id="node9" href="$d0/d4f/GetRemoteConfigVersion_8hpp.html" title="GetRemoteConfigVersion.hpp" alt="" coords="157,169,353,196"/>
+<area shape="rect" id="node16" href="$df/db8/kernel_8hpp.html" title="core/kernel.hpp" alt="" coords="1253,95,1364,121"/>
+<area shape="rect" id="node10" href="$d8/d91/Task_8hpp.html" title="Task.hpp" alt="" coords="433,341,509,367"/>
+<area shape="rect" id="node14" href="$dc/d49/LeosacFwd_8hpp.html" title="LeosacFwd.hpp" alt="" coords="805,251,919,278"/>
+<area shape="rect" id="node19" href="$db/d79/ConfigManager_8hpp.html" title="core/config/ConfigManager.hpp" alt="" coords="1469,251,1671,278"/>
+<area shape="rect" id="node30" href="$db/d33/ConfigChecker_8hpp.html" title="core/config/ConfigChecker.hpp" alt="" coords="378,169,581,196"/>
+<area shape="rect" id="node32" href="$d3/d4d/runtimeoptions_8hpp.html" title="RuntimeOptions class declaration. " alt="" coords="5,251,169,278"/>
+<area shape="rect" id="node35" href="$d8/ddf/networkconfig_8hpp.html" title="NetworkConfig class declaration. " alt="" coords="1703,169,1917,196"/>
+<area shape="rect" id="node36" href="$d6/d6c/module__manager_8hpp.html" title="module_manager.hpp" alt="" coords="1235,169,1382,196"/>
+<area shape="rect" id="node41" href="$d4/d0a/MessageBus_8hpp.html" title="MessageBus.hpp" alt="" coords="2101,169,2223,196"/>
+<area shape="rect" id="node42" href="$d9/d1b/RemoteControl_8hpp.html" title="RemoteControl.hpp" alt="" coords="1941,169,2076,196"/>
+<area shape="rect" id="node45" href="$da/d6d/Scheduler_8hpp.html" title="Scheduler.hpp" alt="" coords="616,169,721,196"/>
+<area shape="rect" id="node49" href="$d6/de5/CoreUtils_8hpp.html" title="CoreUtils.hpp" alt="" coords="1067,169,1169,196"/>
+<area shape="rect" id="node22" href="$d1/ddd/leosacexception_8hpp.html" title="Exception class for LEOSAC Project related errors. " alt="" coords="1736,341,1961,367"/>
+<area shape="rect" id="node24" href="$d7/d7a/configexception_8hpp.html" title="configexception.hpp" alt="" coords="1463,423,1602,449"/>
+<area shape="rect" id="node25" href="$d8/db0/coreexception_8hpp.html" title="Exception class for Core related errors. " alt="" coords="1626,423,1754,449"/>
+<area shape="rect" id="node26" href="$d8/d77/deviceexception_8hpp.html" title="Exception class for Device related errors. " alt="" coords="1778,423,1919,449"/>
+<area shape="rect" id="node27" href="$db/d35/dynlibexception_8hpp.html" title="Exception class for DynLib related errors. " alt="" coords="1944,423,2081,449"/>
+<area shape="rect" id="node28" href="$d0/d4e/fsexception_8hpp.html" title="Exception class for filesystem related errors. " alt="" coords="2209,423,2323,449"/>
+<area shape="rect" id="node29" href="$d1/d8e/gpioexception_8hpp.html" title="Exception class for Gpio related errors. " alt="" coords="2348,423,2475,449"/>
+<area shape="rect" id="node40" href="$d7/dbe/dynamiclibrary_8hpp.html" title="DynamicLibrary class. " alt="" coords="1363,341,1532,367"/>
+<area shape="rect" id="node44" href="$d8/dbc/RemoteControlSecurity_8hpp.html" title="RemoteControlSecurity.hpp" alt="" coords="2007,251,2189,278"/>
+<area shape="rect" id="node48" href="$df/d9a/GenericTask_8hpp.html" title="core/tasks/GenericTask.hpp" alt="" coords="378,251,565,278"/>
+</map>

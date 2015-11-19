@@ -1,0 +1,51 @@
+<map id="src/core/config/ConfigManager.hpp" name="src/core/config/ConfigManager.hpp">
+<area shape="rect" id="node2" href="$d6/dff/src_2core_2config_2ConfigManager_8cpp.html" title="src/core/config/ConfigManager.cpp" alt="" coords="5,266,231,293"/>
+<area shape="rect" id="node3" href="$da/db5/RemoteConfigCollector_8cpp.html" title="src/core/config/RemoteConfig\lCollector.cpp" alt="" coords="484,80,680,121"/>
+<area shape="rect" id="node4" href="$df/db8/kernel_8hpp.html" title="src/core/kernel.hpp" alt="" coords="949,177,1082,203"/>
+<area shape="rect" id="node11" href="$d5/d8e/SyncConfig_8cpp.html" title="src/core/tasks/SyncConfig.cpp" alt="" coords="255,266,458,293"/>
+<area shape="rect" id="node18" href="$d6/d6c/module__manager_8hpp.html" title="src/core/module_manager.hpp" alt="" coords="755,87,953,114"/>
+<area shape="rect" id="node19" href="$d9/d1b/RemoteControl_8hpp.html" title="src/core/RemoteControl.hpp" alt="" coords="1027,87,1214,114"/>
+<area shape="rect" id="node20" href="$de/d21/BaseModule_8cpp.html" title="src/modules/BaseModule.cpp" alt="" coords="1157,177,1351,203"/>
+<area shape="rect" id="node21" href="$d0/dc7/BaseModule_8hpp.html" title="src/modules/BaseModule.hpp" alt="" coords="2359,87,2554,114"/>
+<area shape="rect" id="node50" href="$d8/db2/test_2ConfigManager_8cpp.html" title="test/ConfigManager.cpp" alt="" coords="2579,87,2740,114"/>
+<area shape="rect" id="node5" href="$dd/d24/kernel_8cpp.html" title="src/core/kernel.cpp" alt="" coords="1250,266,1383,293"/>
+<area shape="rect" id="node6" href="$d9/d4a/module__manager_8cpp.html" title="src/core/module_manager.cpp" alt="" coords="482,266,679,293"/>
+<area shape="rect" id="node7" href="$d2/d2a/networkconfig_8cpp.html" title="NetworkConfig class implementation. " alt="" coords="1408,259,1540,300"/>
+<area shape="rect" id="node8" href="$d4/d28/RemoteControl_8cpp.html" title="src/core/RemoteControl.cpp" alt="" coords="1565,266,1751,293"/>
+<area shape="rect" id="node9" href="$df/dca/GetLocalConfigVersion_8cpp.html" title="src/core/tasks/GetLocalConfig\lVersion.cpp" alt="" coords="704,259,903,300"/>
+<area shape="rect" id="node10" href="$d7/d6f/GetRemoteConfigVersion_8cpp.html" title="src/core/tasks/GetRemote\lConfigVersion.cpp" alt="" coords="927,259,1103,300"/>
+<area shape="rect" id="node12" href="$df/d0a/main_8cpp.html" title="standard main " alt="" coords="1128,266,1225,293"/>
+<area shape="rect" id="node13" href="$d8/d37/AuthFileModule_8cpp.html" title="src/modules/auth/auth\l&#45;file/AuthFileModule.cpp" alt="" coords="2138,259,2301,300"/>
+<area shape="rect" id="node14" href="$d0/d58/DoormanModule_8cpp.html" title="src/modules/doorman\l/DoormanModule.cpp" alt="" coords="2327,259,2474,300"/>
+<area shape="rect" id="node15" href="$d7/d36/LEDBuzzerModule_8cpp.html" title="src/modules/led&#45;buzzer\l/LEDBuzzerModule.cpp" alt="" coords="4226,259,4386,300"/>
+<area shape="rect" id="node16" href="$da/d77/SysFsGpioModule_8cpp.html" title="src/modules/sysfsgpio\l/SysFsGpioModule.cpp" alt="" coords="1776,259,1935,300"/>
+<area shape="rect" id="node17" href="$d3/de8/wiegand_8cpp.html" title="src/modules/wiegand\l/wiegand.cpp" alt="" coords="1961,259,2107,300"/>
+<area shape="rect" id="node22" href="$df/d57/AuthFileModule_8hpp.html" title="src/modules/auth/auth\l&#45;file/AuthFileModule.hpp" alt="" coords="3070,169,3233,211"/>
+<area shape="rect" id="node24" href="$de/d46/DoormanModule_8hpp.html" title="src/modules/doorman\l/DoormanModule.hpp" alt="" coords="3257,169,3403,211"/>
+<area shape="rect" id="node27" href="$d3/d6c/EventPublish_8h.html" title="src/modules/event&#45;publish\l/EventPublish.h" alt="" coords="3428,169,3603,211"/>
+<area shape="rect" id="node30" href="$d3/d03/InstrumentationModule_8hpp.html" title="src/modules/instrumentation\l/InstrumentationModule.hpp" alt="" coords="3805,169,3991,211"/>
+<area shape="rect" id="node33" href="$dd/d33/LEDBuzzerModule_8hpp.html" title="src/modules/led&#45;buzzer\l/LEDBuzzerModule.hpp" alt="" coords="4302,169,4462,211"/>
+<area shape="rect" id="node36" href="$d2/dc2/MonitorModule_8hpp.html" title="src/modules/monitor\l/MonitorModule.hpp" alt="" coords="4712,169,4852,211"/>
+<area shape="rect" id="node39" href="$d7/d36/PFDigitalModule_8hpp.html" title="src/modules/pifacedigital\l/PFDigitalModule.hpp" alt="" coords="2691,169,2857,211"/>
+<area shape="rect" id="node42" href="$db/df9/ReplicationModule_8hpp.html" title="src/modules/replication\l/ReplicationModule.hpp" alt="" coords="1559,169,1717,211"/>
+<area shape="rect" id="node43" href="$d3/d0f/RplethModule_8hpp.html" title="src/modules/rpleth\l/RplethModule.hpp" alt="" coords="1742,169,1873,211"/>
+<area shape="rect" id="node44" href="$df/d94/StdinControllerModule_8hpp.html" title="src/modules/stdin&#45;controller\l/StdinControllerModule.hpp" alt="" coords="1897,169,2080,211"/>
+<area shape="rect" id="node45" href="$db/dcb/SysFsGpioModule_8hpp.html" title="src/modules/sysfsgpio\l/SysFsGpioModule.hpp" alt="" coords="1376,169,1535,211"/>
+<area shape="rect" id="node46" href="$d0/dd9/TcpNotifier_8hpp.html" title="src/modules/tcp&#45;notifier\l/TcpNotifier.hpp" alt="" coords="2273,169,2432,211"/>
+<area shape="rect" id="node47" href="$dc/d15/TestAndResetModule_8hpp.html" title="src/modules/test&#45;and\l&#45;reset/TestAndResetModule.hpp" alt="" coords="2457,169,2667,211"/>
+<area shape="rect" id="node48" href="$d0/d6f/wiegand_8hpp.html" title="src/modules/wiegand\l/wiegand.hpp" alt="" coords="2104,169,2249,211"/>
+<area shape="rect" id="node49" href="$dc/dbe/WebServiceNotifier_8hpp.html" title="src/modules/ws&#45;notifier\l/WebServiceNotifier.hpp" alt="" coords="2881,169,3045,211"/>
+<area shape="rect" id="node23" href="$dc/d32/auth_2auth-file_2init_8cpp.html" title="src/modules/auth/auth\l&#45;file/init.cpp" alt="" coords="2881,259,3032,300"/>
+<area shape="rect" id="node25" href="$d2/d46/DoormanInstance_8cpp.html" title="src/modules/doorman\l/DoormanInstance.cpp" alt="" coords="3227,259,3382,300"/>
+<area shape="rect" id="node26" href="$d8/d54/doorman_2init_8cpp.html" title="src/modules/doorman\l/init.cpp" alt="" coords="3057,259,3203,300"/>
+<area shape="rect" id="node28" href="$d5/dca/EventPublish_8cpp.html" title="src/modules/event&#45;publish\l/EventPublish.cpp" alt="" coords="3605,259,3780,300"/>
+<area shape="rect" id="node29" href="$dd/dd8/event-publish_2init_8cpp.html" title="src/modules/event&#45;publish\l/init.cpp" alt="" coords="3407,259,3581,300"/>
+<area shape="rect" id="node31" href="$d7/ded/instrumentation_2init_8cpp.html" title="src/modules/instrumentation\l/init.cpp" alt="" coords="4015,259,4202,300"/>
+<area shape="rect" id="node32" href="$db/d83/InstrumentationModule_8cpp.html" title="src/modules/instrumentation\l/InstrumentationModule.cpp" alt="" coords="3805,259,3991,300"/>
+<area shape="rect" id="node34" href="$d4/db4/led-buzzer_2init_8cpp.html" title="src/modules/led&#45;buzzer\l/init.cpp" alt="" coords="4530,259,4687,300"/>
+<area shape="rect" id="node35" href="$d9/d21/Led_8cpp.html" title="test/Led.cpp" alt="" coords="4411,266,4505,293"/>
+<area shape="rect" id="node37" href="$d9/da6/monitor_2init_8cpp.html" title="src/modules/monitor\l/init.cpp" alt="" coords="4876,259,5016,300"/>
+<area shape="rect" id="node38" href="$df/d30/MonitorModule_8cpp.html" title="src/modules/monitor\l/MonitorModule.cpp" alt="" coords="4712,259,4852,300"/>
+<area shape="rect" id="node40" href="$d6/d6d/pifacedigital_2init_8cpp.html" title="src/modules/pifacedigital\l/init.cpp" alt="" coords="2691,259,2857,300"/>
+<area shape="rect" id="node41" href="$d6/d95/PFDigitalModule_8cpp.html" title="src/modules/pifacedigital\l/PFDigitalModule.cpp" alt="" coords="2500,259,2667,300"/>
+</map>
