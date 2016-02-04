@@ -5,33 +5,25 @@ export default DS.Adapter.extend({
 
   findAll: function (store, type, sinceToken)
   {
-    console.log('Type is: ' + type);
-    console.log("HELLO ADAPTING");
-
-    this.get('ws').wsQuery();
-
-    console.log(sinceToken);
-
-    //store.push('user', {id:42, username: 'toto'});
+    var def = Ember.RSVP.defer();
 
     var ws = this.get('ws');
-    var p = ws.sendJson(1, {'cmd': 'getUsers'});
-    {
+    var p = ws.sendJson('get_users', {});
 
-    };
-    var p2 = p.then(function (data)
+    p.then(function (data)
     {
       "use strict";
-
+      console.log("HIHIHIHI");
       console.log(data);
-
-      store.push('user', {id: 0, username: 'lama'});
+      store.push(data);
+      def.resolve([]);
+    },
+    function (failure)
+    {
+      "use strict";
+      def.reject();
     });
 
-    console.log(p);
-    console.log("P2 VALUE");
-    console.log(p2);
-
-    return p2;
+    return def.promise;
   }
 });

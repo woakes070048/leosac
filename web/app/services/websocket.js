@@ -4,9 +4,10 @@ export default Ember.Service.extend({
   ws: null,
   callback: [],
   beforeOpen: [],
+  store: Ember.inject.service(),
 
   init()
-  {
+   {
     "use strict";
     console.log('Service is initializing ...');
 
@@ -35,12 +36,23 @@ export default Ember.Service.extend({
 
     ws.onmessage = function (event)
     {
-      console.log(event.data);
       var obj = JSON.parse(event.data);
-      console.log(obj);
       var cb = self.get('callback')[obj.uuid];
-      cb.success(obj.content);
-      delete self.get('callback')[obj.uuid];
+      // If we didnt find a callback, it means its opportunistic message
+      // from server
+      if (!cb)
+      {
+        // Naive attempt to push to store. Would world if data
+        // is JSONAPI compatible.
+
+        // Will need more protocol handling tho.
+        self.get('store').push(obj.content);
+      }
+      else
+      {
+        cb.success(obj.content);
+        delete self.get('callback')[obj.uuid];
+      }
     };
 
     ws.onclose = function (event)
@@ -48,9 +60,47 @@ export default Ember.Service.extend({
       console.log('WS was closed');
     };
     this.set('ws', ws);
+
+
+    var timeout_request = function ()
+    {
+      self.get('callback').forEach(function (c)
+      {
+        var time_diff = new Date() - c.timestamp;
+        if (time_diff > 10000)
+        {
+          c.error("TIMEOUT");
+        }
+      });
+      Ember.run.later(timeout_request, 5000);
+    };
+
+    // Setup timer to check for timeout
+    Ember.run.later(function ()
+    {
+      timeout_request();
+    }, 5000);
+
   },
 
-  sendJson(req_id, obj)
+  /**
+   * Generate a GUID.
+   *
+   * @returns {string}
+   */
+  guid() {
+    function s4()
+    {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    }
+
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+      s4() + '-' + s4() + s4() + s4();
+  },
+
+  sendJson(cmd, request_content)
   {
     "use strict";
 
@@ -58,8 +108,9 @@ export default Ember.Service.extend({
     var ws = this.get('ws');
     var callback = this.get('callback');
     var request = {
-      uuid: req_id,
-      content: obj
+      uuid: this.guid(),
+      cmd: cmd,
+      content: request_content
     };
 
     if (ws.readyState === 1)
@@ -75,28 +126,19 @@ export default Ember.Service.extend({
     {
       var on_success = function (data)
       {
-        console.log("HEREHEHREHRHERHEHREH");
-        var d = [{id: 0, username: 'lama'},
-          {id: 1, username:'titi', firstname: 'Blaa'}];
-        Ember.run(null, resolve, d);
+        Ember.run(null, resolve, data);
       };
       var on_error = function (why)
       {
         Ember.run(null, reject, why);
       };
       var cb = {
+        timestamp: new Date(),
         success: on_success,
         error: on_error
       };
       callback[request.uuid] = cb;
     });
   },
-
-  wsQuery()
-  {
-    "use strict";
-    console.log("INSIDE WEBSOCKET SERVICE !!");
-    //this.get('ws').send('LAMASTICOT');
-  }
 
 });
