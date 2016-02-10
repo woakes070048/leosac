@@ -5,20 +5,37 @@ import Ember from 'ember';
  * Leosac we are connecting too.
  */
 export default Ember.Service.extend({
-  websocket: Ember.inject.service(),
-  version: undefined,
+  websocket: Ember.inject.service('websocket'),
 
+  /**
+   * The version number of the Leosac server.
+   */
+  version: "0.0.0",
+
+  /**
+   * Id of the currently logged-in user
+   */
+  user_id: false,
+
+  setCurrentUser(user_id)
+  {
+    "use strict";
+    this.set('user_id', user_id);
+  },
   init()
   {
     "use strict";
 
-    console.log("LEOSAC INFO");
-
     var self = this;
-    websocket.sendJson('get_leosac_version', {}).then(
+    var ws = self.get('websocket');
+    ws.sendJson('get_leosac_version', {}).then(
       function (response)
       {
-        self.version = response.version;
+        self.set('version', response.version);
+      },
+      function (failure)
+      {
+        self.set('version', 'UNKNOWN');
       }
     );
   }

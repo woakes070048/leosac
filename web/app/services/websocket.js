@@ -7,13 +7,12 @@ export default Ember.Service.extend({
   store: Ember.inject.service(),
 
   init()
-   {
+  {
     "use strict";
     console.log('Service is initializing ...');
 
     var ws = this.get('ws');
     ws = new WebSocket('ws://localhost:8888/websocket');
-
     var self = this;
 
     ws.onopen = function ()
@@ -64,14 +63,15 @@ export default Ember.Service.extend({
 
     var timeout_request = function ()
     {
-      self.get('callback').forEach(function (c)
+      for (var key in self.get('callback'))
       {
+        var c = self.get('callback')[key];
         var time_diff = new Date() - c.timestamp;
         if (time_diff > 10000)
         {
           c.error("TIMEOUT");
         }
-      });
+      }
       Ember.run.later(timeout_request, 5000);
     };
 

@@ -3,7 +3,9 @@ Leosac Web Interface
 {{outlet}}
 
 <br>
-{{#link-to "about"}}About{{/link-to}}
+{{#link-to "about"}}About{{/link-to}} <br>
+
+Version: {{globalInfo.user_id}} <br>
 
 <ul>
   {{#each model as |user|}}
@@ -12,3 +14,5 @@ Leosac Web Interface
       </li>
   {{/each}}
 </ul>
+
+{{login-form}}

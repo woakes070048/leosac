@@ -5,6 +5,7 @@ set(WEBSOCK_API_SRCS
         WebSockAPI.cpp
         WSServer.cpp
         api/api.cpp
+        api/APIAuth.cpp
         )
 
 add_library(${WEBSOCK_API_BIN} SHARED ${WEBSOCK_API_SRCS})

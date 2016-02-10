@@ -13,14 +13,13 @@ export default DS.Adapter.extend({
     p.then(function (data)
     {
       "use strict";
-      console.log("HIHIHIHI");
-      console.log(data);
       store.push(data);
       def.resolve([]);
     },
     function (failure)
     {
       "use strict";
+      console.log("FAILURE");
       def.reject();
     });
 

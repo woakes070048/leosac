@@ -72,9 +72,9 @@ void WSServer::on_message(websocketpp::connection_hdl hdl, Server::message_ptr m
         {
             api_rep = api_handle->get_leosac_version();
         }
-        else if (command == "get_auth_token")
+        else if (command == "create_auth_token")
         {
-            api_rep = api_handle->get_auth_token(req.at("content"));
+            api_rep = api_handle->create_auth_token(req.at("content"));
         }
         else if (command == "get_users")
         {
@@ -120,4 +120,9 @@ void WSServer::start_shutdown()
     {
         srv_.close(con_api.first, 0, "bye");
     }
+}
+
+APIAuth &WSServer::auth()
+{
+    return auth_;
 }

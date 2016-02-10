@@ -17,42 +17,26 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "tools/leosac.hpp"
-#include "api.hpp"
-#include "../WSServer.hpp"
+#include <algorithm>
+#include "APIAuth.hpp"
+#include "tools/GenGuid.h"
 
 using namespace Leosac;
 using namespace Leosac::Module;
 using namespace Leosac::Module::WebSockAPI;
 
-API::API(WSServer &server) :
-    server_(server)
+std::string APIAuth::generate_token(const std::string &username, const std::string &password)
 {
-
+    if (username == "admin" && password == "admin")
+    {
+        auto token = gen_uuid();
+        tokens_.push_back(token);
+        return token;
+    }
+    return "";
 }
 
-API::json API::get_leosac_version() const
+bool APIAuth::authenticate(const std::string &token) const
 {
-    json ret;
-    ret["version"] = getVersionString();
-    return ret;
-}
-
-API::json API::create_auth_token(const API::json &req)
-{
-    json rep;
-    std::string username = req.at("username");
-    std::string password = req.at("password");
-
-    auto token = server_.auth().generate_token(username, password);
-    if (!token.empty())
-    {
-        rep["status"] = 0;
-        rep["token"] = token;
-    }
-    else
-    {
-        rep["status"] = -1;
-    }
-    return rep;
+    return std::find(tokens_.begin(), tokens_.end(), token) != tokens_.end();
 }

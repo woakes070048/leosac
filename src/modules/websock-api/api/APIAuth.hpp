@@ -19,8 +19,8 @@
 
 #pragma once
 
-#include <memory>
-#include <json.hpp>
+#include <string>
+#include <list>
 
 namespace Leosac
 {
@@ -28,41 +28,37 @@ namespace Module
 {
 namespace WebSockAPI
 {
-
-class WSServer;
-
 /**
- * This is the application-level object that provide
- * the API.
+ * This class is responsible for providing an API to manage
+ * authentication for Websocket client.
  *
- * One objected is instantiated per websocket client.
+ * The object is instantiated for the lifetime of the WSServer object.
  */
-class API {
+class APIAuth
+{
       public:
-        using json = nlohmann::json;
-
-        API(WSServer &server);
-
         /**
-         * Retrieve the current version number of Leosac.
-         */
-        json get_leosac_version() const;
-
-        /**
-         * Generate an authentication token.
+         * Attempt to authenticate with username/password credential
+         * and generate an authentication token.
          *
-         * The request is excepted to contain credential.
+         * On success return a new authentication token that will
+         * be valid when calling `authenticate()`.
+         * On error returns an empty string.
          */
-        json create_auth_token(const json &req);
+        std::string generate_token(const std::string &username,
+                                   const std::string &password);
+
+        /**
+         * Attempt to authenticate with an authentication token.
+         *
+         * Returns `true` on succes, `false` on failure.
+         */
+        bool authenticate(const std::string &token) const;
 
       private:
-        /**
-         * The API server.
-         */
-        WSServer &server_;
+        // For now all user are equal.
+        std::list<std::string> tokens_;
 };
-
-using APIPtr = std::shared_ptr<API>;
 
 }
 }

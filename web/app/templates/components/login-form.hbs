@@ -1,0 +1,9 @@
+<form>
+  {{input value=username}} <br>
+  {{input type=password value=password}}
+    <button {{action "login"}}>Login</button>
+    {{#if isLoginFailed}}
+      Failed login !
+    {{/if}}
+    <br>
+</form>

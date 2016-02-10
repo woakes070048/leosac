@@ -22,6 +22,7 @@
 #include <set>
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
+#include "modules/websock-api/api/APIAuth.hpp"
 #include "api/api.hpp"
 
 namespace Leosac
@@ -52,6 +53,11 @@ class WSServer {
          */
         void start_shutdown();
 
+        /**
+         * Retrieve the authentication helper.
+         */
+        APIAuth &auth();
+
       private:
 
         void on_open(websocketpp::connection_hdl hdl);
@@ -61,7 +67,7 @@ class WSServer {
         void on_message(websocketpp::connection_hdl hdl, Server::message_ptr msg);
 
         ConnectionAPIMap connection_api_;
-
+        APIAuth auth_;
 };
 }
 }
