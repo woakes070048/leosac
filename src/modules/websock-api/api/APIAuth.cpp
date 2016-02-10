@@ -30,13 +30,19 @@ std::string APIAuth::generate_token(const std::string &username, const std::stri
     if (username == "admin" && password == "admin")
     {
         auto token = gen_uuid();
-        tokens_.push_back(token);
+        tokens_[token] = username;
         return token;
     }
     return "";
 }
 
-bool APIAuth::authenticate(const std::string &token) const
+bool APIAuth::authenticate(const std::string &token, std::string &user_id) const
 {
-    return std::find(tokens_.begin(), tokens_.end(), token) != tokens_.end();
+    auto it = tokens_.find(token);
+    if (it != tokens_.end())
+    {
+        user_id = it->second;
+        return true;
+    }
+    return false;
 }

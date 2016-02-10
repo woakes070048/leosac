@@ -20,7 +20,8 @@
 #pragma once
 
 #include <string>
-#include <list>
+#include <map>
+#include <vector>
 
 namespace Leosac
 {
@@ -51,13 +52,18 @@ class APIAuth
         /**
          * Attempt to authenticate with an authentication token.
          *
-         * Returns `true` on succes, `false` on failure.
+         * @param token The token used to perform the authentication
+         * @param user_id [out] The user_id who owns the token.
+         * Returns `true` on success, `false` on failure.
          */
-        bool authenticate(const std::string &token) const;
+        bool authenticate(const std::string &token, std::string &user_id) const;
 
       private:
-        // For now all user are equal.
-        std::list<std::string> tokens_;
+        /**
+         * Map a token to a username
+         */
+        using TokenMap = std::map<std::string, std::string>;
+        TokenMap tokens_;
 };
 
 }

@@ -26,7 +26,8 @@ using namespace Leosac::Module;
 using namespace Leosac::Module::WebSockAPI;
 
 API::API(WSServer &server) :
-    server_(server)
+    server_(server),
+    auth_status_(AuthStatus::NONE)
 {
 
 }
@@ -41,18 +42,54 @@ API::json API::get_leosac_version() const
 API::json API::create_auth_token(const API::json &req)
 {
     json rep;
-    std::string username = req.at("username");
-    std::string password = req.at("password");
 
-    auto token = server_.auth().generate_token(username, password);
-    if (!token.empty())
+    if (auth_status_ != AuthStatus::NONE)
     {
-        rep["status"] = 0;
-        rep["token"] = token;
+        rep["status"] = -2;
+        rep["message"] = "Already logged in";
     }
     else
     {
-        rep["status"] = -1;
+        std::string username = req.at("username");
+        std::string password = req.at("password");
+
+        auto token = server_.auth().generate_token(username, password);
+        if (!token.empty())
+        {
+            rep["status"] = 0;
+            rep["token"] = token;
+            auth_status_ = AuthStatus::LOGGED_IN;
+        }
+        else
+        {
+            rep["status"] = -1;
+        }
+    }
+    return rep;
+}
+
+API::json API::authenticate_with_token(const API::json &req)
+{
+    json rep;
+
+    if (auth_status_ != AuthStatus::NONE)
+    {
+        rep["status"] = -2;
+        rep["message"] = "Already logged in";
+    }
+    else
+    {
+        std::string user_id;
+        if (server_.auth().authenticate(req.at("token"), user_id))
+        {
+            rep["status"] = 0;
+            rep["user_id"] = user_id;
+            auth_status_ = AuthStatus::LOGGED_IN;
+        }
+        else
+        {
+            rep["status"] = -1;
+        }
     }
     return rep;
 }
