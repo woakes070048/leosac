@@ -9,26 +9,21 @@ export default Ember.Route.extend({
     var self = this;
     var promise_or_ret = this.get('authSrv').isLoggedIn();
 
-    if (promise_or_ret === false)
+    if (promise_or_ret === true)
     {
-      self.transitionTo('login');
+      self.transitionTo('index');
       return;
     }
-    else if (promise_or_ret === true)
+    else if (promise_or_ret === false)
       return;
 
     promise_or_ret.then(function ()
     {
-      // success, do nothing and let user reach page
+      self.transitionTo('index');
     }, function ()
     {
-      self.transitionTo('login');
+      // Error means not logged in so we display this page.
     });
     return promise_or_ret;
-  },
-
-  model() {
-    "use strict";
-    return this.store.findAll('user');
   }
 });
