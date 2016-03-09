@@ -129,4 +129,3 @@ json WSServer::dispatch_request(APIPtr api_handle, json &in)
         return {};
     }
 }
-

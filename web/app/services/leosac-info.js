@@ -13,15 +13,11 @@ export default Ember.Service.extend({
   version: "0.0.0",
 
   /**
-   * Id of the currently logged-in user
+   * This title of the current view.
+   * Not sure this is the best way to manage this...
    */
-  user_id: false,
+  current_view_title: "Default",
 
-  setCurrentUser(user_id)
-  {
-    "use strict";
-    this.set('user_id', user_id);
-  },
   init()
   {
     "use strict";
