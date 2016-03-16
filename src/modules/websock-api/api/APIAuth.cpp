@@ -18,20 +18,46 @@
 */
 
 #include <algorithm>
+#include <odb/object-result.hxx>
+#include <odb/session.hxx>
+#include "db/user.hpp"
+#include "odb_gen/user_odb.h"
 #include "APIAuth.hpp"
 #include "tools/GenGuid.h"
+#include "WSServer.hpp"
+#include "db/database.hpp"
 
 using namespace Leosac;
 using namespace Leosac::Module;
 using namespace Leosac::Module::WebSockAPI;
 
+APIAuth::APIAuth(WSServer &srv) :
+    server_(srv)
+{
+}
+
 std::string APIAuth::generate_token(const std::string &username, const std::string &password)
 {
-    if (username == "admin" && password == "admin")
+    using namespace odb;
+    using namespace odb::core;
+    using query = odb::query<DB::User>;
+    using result = odb::result<DB::User>;
     {
-        auto token = gen_uuid();
-        tokens_[token] = username;
-        return token;
+        auto db = server_.db();
+        transaction t(db->begin());
+
+        result r(db->query<DB::User>(query::username == username));
+        for (DB::User &user : r)
+        {
+            // We should have at most one entry.
+            if (user.username() == username && user.password() == password)
+            {
+                auto token = gen_uuid();
+                tokens_[token] = username;
+                return token;
+            }
+            break;
+        }
     }
     return "";
 }
