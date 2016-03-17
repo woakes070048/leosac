@@ -25,6 +25,7 @@
 #include "modules/websock-api/api/APIAuth.hpp"
 #include "api/api.hpp"
 #include "db/db_fwd.hpp"
+#include "WebSockAPI.hpp"
 
 namespace Leosac
 {
@@ -39,7 +40,8 @@ class WSServer {
          * @param database A (non-null) pointer to the
          * database.
          */
-        WSServer(DBPtr database);
+        WSServer(WebSockAPIModule &module,
+                 DBPtr database);
 
         using Server = websocketpp::server<websocketpp::config::asio>;
         using ConnectionAPIMap = std::map<websocketpp::connection_hdl,
@@ -68,6 +70,11 @@ class WSServer {
          */
         DBPtr db();
 
+        /**
+         * Retrieve the CoreUtils pointer.
+         */
+        CoreUtilsPtr core_utils();
+
       private:
         using json = nlohmann::json;
 
@@ -95,6 +102,13 @@ class WSServer {
          * Handler to the database.
          */
         DBPtr db_;
+
+        /**
+         * A reference to the module.
+         *
+         * The module is garanteed to outlive the WSServer.
+         */
+        WebSockAPIModule &module_;
 };
 }
 }
