@@ -24,7 +24,7 @@
 #include <websocketpp/server.hpp>
 #include "modules/websock-api/api/APIAuth.hpp"
 #include "api/api.hpp"
-#include "db/db_fwd.hpp"
+#include "tools/db/db_fwd.hpp"
 #include "WebSockAPI.hpp"
 
 namespace Leosac

@@ -25,7 +25,7 @@
 #include "APIAuth.hpp"
 #include "tools/GenGuid.h"
 #include "WSServer.hpp"
-#include "db/database.hpp"
+#include "tools/db/database.hpp"
 
 using namespace Leosac;
 using namespace Leosac::Module;
